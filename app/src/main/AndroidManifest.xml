@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SchoolApp">
         <activity
+            android:name=".PagosActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".datosActivity"
+            android:name=".DatosActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
