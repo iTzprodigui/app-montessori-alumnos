@@ -8,6 +8,11 @@ import androidx.recyclerview.widget.RecyclerView
 
 class CustomAdapter: RecyclerView.Adapter<CustomAdapter.ViewHolder>(){
 
+    val fechas = arrayOf("26/04/2022","26/03/2022","26/02/2022")
+
+    val mensualidades = arrayOf("Mensualidad", "Mensualidad", "Mensualidad")
+
+    val cantidadPago = arrayOf("$1000", "$1000", "$1000")
 
 
 
@@ -29,11 +34,13 @@ class CustomAdapter: RecyclerView.Adapter<CustomAdapter.ViewHolder>(){
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
-        
+        viewHolder.itemFecha.text = fechas[i]
+        viewHolder.itemMensualidad.text = mensualidades[i]
+        viewHolder.itemCantidadPago.text = cantidadPago[i]
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return fechas.size
     }
 
 }
